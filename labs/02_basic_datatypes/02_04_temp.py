@@ -10,3 +10,7 @@ Output should read like - "81.32 degrees fahrenheit = 27.4 degrees celsius"
 
 
 '''
+import sys
+F = float(sys.argv[1])
+C = (F - 32) * (5 / 9)
+print(f"{F} degrees fahrenheit = {C} degrees celsius")
