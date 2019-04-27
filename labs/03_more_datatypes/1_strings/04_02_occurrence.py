@@ -7,3 +7,6 @@ Letter input: o
 Result: 4
 
 '''
+string_of_words = input("Please enter enter some words: ")
+letter = input("substring to find: ")
+print(string_of_words.find(letter))

@@ -8,3 +8,9 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+for num in range(50):
+    if (num+1) % 10 == 0:
+        end_chr = '\n'
+    else:
+        end_chr = ' '
+    print(num, end=end_chr)

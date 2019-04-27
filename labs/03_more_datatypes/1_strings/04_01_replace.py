@@ -7,4 +7,6 @@ Symbol input: #
 Result: #ore python progra##ing please
 
 '''
-
+words = input("Please enter a string of input : ")
+symbol = input("Enter a symbol : ")
+print(words.replace(words[0], symbol))
