@@ -18,3 +18,46 @@ Cars, animals, poker games, sports teams, trees, beers, people etc...
 
 
 '''
+class Vehicle(object):
+    vehicle_transmission = 'manual'
+    country_of_registration = 'DE'
+    def __init__(self, model='rickshaw', emission='petrol', wheels=2):
+        self.model = model
+        self.emission = emission
+        self.wheels = wheels
+    def __str__(self):
+        return "This class is for vehicle object"
+    def vehicle_print(self):
+        return "This class talks about vehicle {} and the {} emission and also about {} wheels".format(self.model, self.emission, self.wheels)
+    def __add__(self, other):
+        return self.wheels + other.wheels
+
+car = Vehicle('Audi', 'diesel', 4)
+print(car.model)
+print(car.vehicle_print())
+#print(car.__add__())
+
+truck = Vehicle('Man', 'diesel', 16)
+print(car + truck)
+
+
+class inhabitant(object):
+    living = True
+    source_of_life = 'oxygen'
+    def __init__(self, planet='earth', species='alien', arm=4 ):
+        self.planet = planet
+        self.species = species
+        self.arm = arm
+
+    def __str__(self):
+        return " This class is about creatures of this universe"
+
+    def inhab_print(self):
+        return "This inhabitants are from planet {} of species as {} with {} arms".format(self.planet, self.species, self.arm)
+
+human = inhabitant('earth', 'homospaiens', )
+print(human.inhab_print())
+print(human)
+dead_rat = inhabitant('nebula', 'raton', 8)
+dead_rat.source_of_life = 'co2'
+print(dead_rat.source_of_life)

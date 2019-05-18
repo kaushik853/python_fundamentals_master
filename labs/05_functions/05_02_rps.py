@@ -19,12 +19,18 @@ def get_hand(hand):
 
 # function should take in two hands and return a string "You won!" or "You lost :(" or "You tied!"
 def determine_winner(computer, player):
-    if (computer == 'rock' and player == 'paper') or (computer == 'scissor' and player == 'rock') or (computer == 'paper' and player == 'scissor'):
-        return 'You Won!'
-    # if (player == 'rock' and computer == 'paper') or (player == 'scissor' and computer == 'rock') or (player == 'paper' and computer == 'scissor'):
-    #     print('You lost :(')
+    if computer == player:
+        return "Its a tie"
+    elif computer == player - 1 or player == computer + 2:
+        return "You lost :("
     else:
-        return 'You lost!'
+        return "You win"
+    # if (computer == 'rock' and player == 'paper') or (computer == 'scissor' and player == 'rock') or (computer == 'paper' and player == 'scissor'):
+    #     return 'You Won!'
+    # if (player == 'rock' and computer == 'paper') or (player == 'scissor' and computer == 'rock') or (player == 'paper' and computer == 'scissor'):
+    #      print('You lost :(')
+    # else:
+    #     return 'You lost!'
 
 
 
@@ -34,13 +40,13 @@ Start here
 '''
 user_input = int(input("please enter a number between 0 and 2: "))
 comp_input = random.randint(0, 2)
-while user_input == comp_input:
-    comp_input = random.randint(0, 2)
+# while user_input == comp_input:
+#     comp_input = random.randint(0, 2)
 user_hand = get_hand(user_input)
 comp_hand = get_hand(comp_input)
 print(user_hand)
 print(comp_hand)
-winner = determine_winner(comp_hand, user_hand)
+winner = determine_winner(comp_input, user_input)
 print(winner)
 #print('thankx for playing')
 

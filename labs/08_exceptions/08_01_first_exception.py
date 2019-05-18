@@ -8,3 +8,8 @@ print(list_[1])
 This raises and exception that needs to be handled.
 
 '''
+list_ = ["hello world!"]
+try:
+    print(list_[1])
+except IndexError as IE:
+    print(f"There is an error as {IE}")
